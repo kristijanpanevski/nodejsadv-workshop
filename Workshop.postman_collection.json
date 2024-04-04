@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "0932e937-f35b-4567-8f17-2409ab66e766",
+		"name": "Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33623210"
+	},
+	"item": [
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Shirt\",\r\n    \"stock\": \"100\",\r\n    \"description\": \"A simple shirt\",\r\n    \"category\": \"Shirt Category\",\r\n    \"price\": 20,\r\n    \"rating\": 10\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Shirt\",\r\n    \"stock\": \"100\",\r\n    \"description\": \"A simple shirt\",\r\n    \"category\": \"Shirt Category\",\r\n    \"price\": 20,\r\n    \"rating\": 10\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "660eecb5d052ace661ad5794"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product info",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 10,\r\n        \"title\": \"T-shirt\",\r\n\r\n    \"rating\": 80\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "660eecb5d052ace661ad5794"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

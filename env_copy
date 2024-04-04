@@ -1,0 +1,6 @@
+PORT=3000
+HOST=0.0.0.0
+MONGO_USERNAME=kristijanpanevski
+MONGO_PASSWORD=password12345
+MONGO_CLUSTER=cluster0.lwilirl.mongodb.net
+MONGO_DB_NAME=Products
