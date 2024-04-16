@@ -59,4 +59,15 @@ export class ProductController {
       res.status(400).json({ msg: error.message });
     }
   }
+    //5. Delete product
+  static async deleteProduct(req, res) {
+    try {
+      await ProductService.deleteProduct(req.params.id);
+
+      res.sendStatus(204);
+    } catch (error) {
+      console.log(error);
+      res.status(404).json({ msg: error.message });
+    }
+  }
 }

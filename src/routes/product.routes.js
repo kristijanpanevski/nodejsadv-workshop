@@ -8,4 +8,4 @@ productsRouter.post("/", ProductController.createProduct);
 productsRouter.get("/:id", ProductController.getProductById);
 
 productsRouter.patch("/:id", ProductController.updateProduct);
-// studentsRouter.delete("/:id", StudentController.deleteStudent);
+productsRouter.delete("/:id", ProductController.deleteProduct);
